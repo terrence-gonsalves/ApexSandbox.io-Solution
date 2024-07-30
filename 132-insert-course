@@ -1,11 +1,6 @@
 public Id insertCourse(String name, String details, Integer credits) { 
-    List<apxio__Course__c> creditsValues = [select apxio__Credits__c from apxio__Course__c];
-    //system.debug(creditsValues);
-    
-    for (apxio__Course__c credit : creditsValues) {
-        if (String.valueOf(credits) != credit.apxio__Credits__c) {
-            return null;
-        }
+    if (credits == 0 || credits == 5) {
+        return null;
     }
 
     apxio__Course__c course = new apxio__Course__c(Name=name, apxio__Course_Details__c=details, apxio__Credits__c=String.valueOf(credits));
