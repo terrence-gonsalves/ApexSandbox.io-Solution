@@ -1,0 +1,16 @@
+public void createCourseAndClass(String name, String description) {
+    Integer maxSize = 255;
+
+    if (name != null or descritption != null) {        
+        apxio__Course__c newCourse = new apxio__Course__c(Name=name, apxio__Course_Details__c=description);
+        insert newCourse;
+
+        // make sure description is not greater than 255 characters
+        if (description.length() > maxSize ) {
+            description = description.substring(0, maxSize);
+        }
+
+        apxio__Class__c newCourseClass = new apxio__Class__c(Name=name, apxio__Description__c=description, apxio__Course__c=newCourse.Id);
+        insert newCourseClass;
+    }
+}
