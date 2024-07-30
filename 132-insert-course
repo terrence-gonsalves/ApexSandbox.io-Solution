@@ -3,7 +3,7 @@ public Id insertCourse(String name, String details, Integer credits) {
     //system.debug(creditsValues);
     
     for (apxio__Course__c credit : creditsValues) {
-        if (String.valueOf(credits) != credit.credits) {
+        if (String.valueOf(credits) != credit.apxio__Credits__c) {
             return null;
         }
     }
