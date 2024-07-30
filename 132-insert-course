@@ -1,5 +1,5 @@
 public Id insertCourse(String name, String details, Integer credits) { 
-    List<apxio__Course__c> creditsValues = [select apxio__Credits__c from apxio__Course__c;]
+    List<apxio__Course__c> creditsValues = [select apxio__Credits__c from apxio__Course__c];
     system.debug(creditsValues);
     
     // for (for credit : creditsValues) {
