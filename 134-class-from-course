@@ -1,8 +1,8 @@
 public Id classFromCourse(String courseName) {
     List<apxio__Course__c> courseInfo = [select Id from apxio__Course__c where Name = :courseName];
 
-    apxio__Class__c newClass = new apxio__Class__c(Name = courseName, apxio__Course__c=courseInfo.Id);
+    apxio__Class__c newClass = new apxio__Class__c(Name = courseName, apxio__Course__c=courseInfo[0].Id);
     insert newClass;
 
-    return newClass[0].Id;
+    return newClass.Id;
 }
