@@ -16,6 +16,7 @@ public String convert15to18DigitId(String fifteenDigit)
 
         for (integer j = 0; j < 5; j++) {
             string c = fifteenDigit.substring(i * 5 + j, i * 5 + j + 1);
+            
             if (c.toUpperCase().equals(c) && c >= 'A' && c <= 'Z') {
                 flags = flags + (1 << j);
             }
