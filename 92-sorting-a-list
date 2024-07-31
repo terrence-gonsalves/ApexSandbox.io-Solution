@@ -1,5 +1,9 @@
 public List<String> getNamesInAscOrder(List<String> accountNames)
 {
+    if (accountNames == null) {
+        return null;
+    }
+    
     List<String> names = new List<String>(accountNames);
     return names;
 }
