@@ -1,30 +1,32 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
+    if (fifteenDigit == null) {
+        return null;
+    }
+
     if (fifteenDigit.length() != 15) {
-        return -1;
+        return '-1';
     }
 
     String suffix = '';
     Integer flags;
 
-    for (Integer i = 0; i < 3; i++) {
+    for (integer i = 0; i < 3; i++) {
         flags = 0;
 
-        for (Integer j = 0; j < 5; j++) {
-            String c = fifteenDigit.substring(i * 5 + j, i * 5 + j + 1);
-
-            // only add to flags if c is an uppercase letter:
+        for (integer j = 0; j < 5; j++) {
+            string c = fifteenDigit.substring(i * 5 + j,i * 5 + j + 1);
             if (c.toUpperCase().equals(c) && c >= 'A' && c <= 'Z') {
-                    flags = flags + (1 << j);
+                flags = flags + (1 << j);
             }
         }
-
         if (flags <= 25) {
-            suffix = suffix + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.substring(flags, flags + 1);
-        } else {
-            suffix = suffix + '012345'.substring(flags - 25, flags - 24);
+            suffix += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.substring(flags,flags+1);
+        }else{
+            suffix += '012345'.substring(flags - 26, flags-25);
         }
     }
 
-    return fifteenDigit + suffix;
+    String outputId = fifteenDigit + suffix;
+    return outputId;
 }
