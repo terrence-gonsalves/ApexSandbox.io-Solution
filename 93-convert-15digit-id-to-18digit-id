@@ -15,15 +15,16 @@ public String convert15to18DigitId(String fifteenDigit)
         flags = 0;
 
         for (integer j = 0; j < 5; j++) {
-            string c = fifteenDigit.substring(i * 5 + j,i * 5 + j + 1);
+            string c = fifteenDigit.substring(i * 5 + j, i * 5 + j + 1);
             if (c.toUpperCase().equals(c) && c >= 'A' && c <= 'Z') {
                 flags = flags + (1 << j);
             }
         }
+
         if (flags <= 25) {
-            suffix += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.substring(flags,flags+1);
-        }else{
-            suffix += '012345'.substring(flags - 26, flags-25);
+            suffix += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.substring(flags, flags + 1);
+        } else {
+            suffix += '012345'.substring(flags - 26, flags - 25);
         }
     }
 
