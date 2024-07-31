@@ -8,7 +8,9 @@ public List<String> getNamesInAscOrder(List<String> accountNames)
         return accountNames;
     }
 
-    List<String> names = new List<String>(accountNames);
+    List<String> names = new List<String>();
+    
+    names.add(accountNames);
 
     return names.sort();
 }
