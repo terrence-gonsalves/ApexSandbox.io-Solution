@@ -1,8 +1,7 @@
 public String formatName(String firstName, String lastName) {
     if (firstName == '' || lastName == '') {
-        return;
+        return '';
     }
 
-    List<String> names = new List<String>{firstName, lastName};
-    return String.join(names, ' ');
+    return firstName + ' ' + lastName;
 }
