@@ -1,0 +1,13 @@
+public Integer sumToN(Integer n) {
+    Integer total = 0;
+
+    if (n == 0) {
+        return n;
+    }
+
+    for (Integer x = 0; x <= n; x++) {
+        total += x;
+    }
+
+    return total;
+}
