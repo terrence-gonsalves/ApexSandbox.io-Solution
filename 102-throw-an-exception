@@ -1,10 +1,17 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
-    for ( Account acct : accounts) {
-        if (acct.BillingCity == null) throw new AccountException('Account item missing BillingCity!');
-    }
+    try {
+        for ( Account acct : accounts) {
+            if (acct.BillingCity == null) throw new AccountException('Invalid BillingCity');
+        }
 
-    return accounts;
+        return accounts;
+    } catch (IllegalArgumentException e) {
+        return e.getMessage();
+    }
+    
+
+    
 }
 
 //do not remove the following custom-defined exception
