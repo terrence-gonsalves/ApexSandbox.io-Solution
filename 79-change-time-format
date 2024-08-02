@@ -1,4 +1,6 @@
 public String changeTimeFormat(String strTime) {
+    String updatedHour = '';
+
     if (strTime == '' || strTime == null) {
         return '';
     }
@@ -23,7 +25,13 @@ public String changeTimeFormat(String strTime) {
         calculatedHour = 12;
     }
 
-    String updatedHour = String.valueOf(calculatedHour);
+    if (calculatedHour < 12) {
+        updatedHour = String.valueOf(calculatedHour);
+
+        if (updatedHour.length() == 1) {
+            updatedHour = '0' + updatedHour;
+        }
+    }
 
     return updatedHour + ':' + mins + ' ' + amPm;
 }
