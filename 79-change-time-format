@@ -19,6 +19,10 @@ public String changeTimeFormat(String strTime) {
         calculatedHour = 12;
     }
 
+    if (calculatedHour == 12) {
+        amPm = 'PM';
+    }
+
     String updatedHour = String.valueOf(calculatedHour);
 
     return updatedHour + ':' + mins + ' ' + amPm;
