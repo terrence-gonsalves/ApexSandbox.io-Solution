@@ -3,6 +3,8 @@ public List<Account> checkAccounts(List<Account> accounts)
     for ( Account acct : accounts) {
         if (acct.BillingCity == null) throw new AccountException('Account item missing BillingCity!');
     }
+
+    return accounts;
 }
 
 //do not remove the following custom-defined exception
