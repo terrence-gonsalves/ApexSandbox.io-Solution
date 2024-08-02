@@ -21,13 +21,13 @@ public String changeTimeFormat(String strTime) {
         amPm = 'PM';
     }
 
-    if (calculatedHour == 00) {
+    if (calculatedHour == 0) {
         calculatedHour = 12;
     }
 
-    if (calculatedHour < 12) {
-        updatedHour = String.valueOf(calculatedHour);
+    updatedHour = String.valueOf(calculatedHour);
 
+    if (calculatedHour < 12) {
         if (updatedHour.length() == 1) {
             updatedHour = '0' + updatedHour;
         }
