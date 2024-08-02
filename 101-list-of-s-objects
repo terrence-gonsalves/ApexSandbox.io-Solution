@@ -9,9 +9,5 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     objectsList.addAll(accounts);
     objectsList.addAll(contacts);
 
-    if (!objectsList.isEmpty()) {
-        return objectsList;
-    }
-
     return objectsList;
 }
