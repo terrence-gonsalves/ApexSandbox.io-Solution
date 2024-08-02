@@ -1,5 +1,5 @@
 public class Stack {
-    List<sObject> stack = new List<sObject>();
+    List<Object> stack = new List<Object>();
     
     
     public void push(Object obj) {
