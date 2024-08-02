@@ -1,0 +1,9 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    for ( Account acct : accounts) {
+        if (acct.BillingCity == null) throw new AccountException('Account item missing BillingCity!');
+    }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
