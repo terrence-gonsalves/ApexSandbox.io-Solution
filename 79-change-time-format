@@ -15,12 +15,12 @@ public String changeTimeFormat(String strTime) {
         amPm = 'PM';
     }
 
-    if (calculatedHour == 00) {
-        calculatedHour = 12;
-    }
-
     if (calculatedHour == 12) {
         amPm = 'PM';
+    }
+
+    if (calculatedHour == 00) {
+        calculatedHour = 12;
     }
 
     String updatedHour = String.valueOf(calculatedHour);
