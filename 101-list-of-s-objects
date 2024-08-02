@@ -12,4 +12,6 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
     if (!objectsList.isEmpty()) {
         return objectsList;
     }
+
+    return objectsList;
 }
