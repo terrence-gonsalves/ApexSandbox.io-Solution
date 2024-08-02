@@ -1,0 +1,25 @@
+public String changeTimeFormat(String strTime) {
+    if (strTime == '' || strTime == null) {
+        return '';
+    }
+
+    String amPm = 'AM';
+
+    String hour = strTime.substringBefore(':');
+    String mins = strTime.substringAfter(':');
+
+    Integer calculatedHour = Integer.valueOf(hour);
+
+    if (calculatedHour > 12) {
+        calculatedHour -= 12;
+        amPm = 'PM';
+    }
+
+    if (calculatedHour == 00) {
+        calculatedHour = 12;
+    }
+
+    String updatedHour = String.valueOf(calculatedHour);
+
+    return updatedHour + ':' + mins + ' ' + amPm;
+}
