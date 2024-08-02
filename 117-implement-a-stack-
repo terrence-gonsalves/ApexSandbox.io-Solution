@@ -3,22 +3,22 @@ public class Stack {
     
     
     public void push(Object obj) {
-        stack.add(obj);
+        this.stack.add(obj);
     }
     
     public Object pop() {
-       return stack.remove(stack.size() - 1);
+       return this.stack.remove(stack.size() - 1);
     
     public Integer size() {
-       return stack.size();
+       return this.stack.size();
     }
     
     public Object peek(){
-        return stack.get(stack.size() - 1);
+        return this.stack.get(stack.size() - 1);
     }
     
     public Boolean isEmpty() {
-       if (stack.isEmpty()) {
+       if (this.stack.isEmpty()) {
            return true;
        }
 
