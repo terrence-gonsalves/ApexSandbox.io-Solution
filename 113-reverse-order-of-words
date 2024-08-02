@@ -1,9 +1,5 @@
 public String reverseWordsInASentence(String sentence){ 
     if (String.isEmpty(sentence)) {
-        return '';
-    }
-
-    if (sentence == null) {
         return null;
     }
 
