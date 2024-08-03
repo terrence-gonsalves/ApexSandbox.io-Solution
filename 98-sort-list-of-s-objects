@@ -1,0 +1,59 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    if (accounts == null) return null;
+
+    List<AccountWrapper> accountWrappers = new List<AccountWrapper>();
+
+    for (Account acct : accounts) {
+        accountWrappers.add(new AccountWrapper(acct));
+    }
+
+    accountWrappers.sort();
+    accounts.clear();
+
+    for (AccountWrapper acc : accountWrappers) {
+        accounts.add(acc.account);
+    }
+
+    return accounts;
+}
+
+public class AccountWrapper implements Comparable {
+    public Account account
+        
+    public AccountWrapper(Account acct) {
+        if (acct == null) {
+            Exception e = new NullPointerException();
+            e.setMessage('Account cannot be null');
+            throw e;
+        }
+
+    	account = acct;
+    }
+
+    public Integer compareTo(Object compareTo) {
+        AccountWrapper otherAccount = (AccountWrapper) compareTo;
+        Integer returnValue = 0;
+
+        if (accoutn.AnnualRevenue == null && otherAccount.account.AnnualRevenue == null) {
+            returnValue = 0;
+        }
+
+        if (account.AnnualRevenue == null && otherAccount.account.AnnualRevenue != null) {
+            returnValue = -1;
+        }
+
+        if (account.AnnualRevenue != null && otherAccount.account.AnnualRevenue == null) {
+            returnValue = 1;
+        }
+
+        if (account.AnnualRevenue > otherAccount.account.AnnualRevenue) {
+            returnValue = -1;
+        }
+
+        if (account.AnnualRevenue < otherAccount.account.AnnualRevenue) {
+            returnValue = 1;
+        }
+
+        return returnValue;
+    }
+}
