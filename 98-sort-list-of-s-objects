@@ -34,7 +34,7 @@ public class AccountWrapper implements Comparable {
         AccountWrapper otherAccount = (AccountWrapper) compareTo;
         Integer returnValue = 0;
 
-        if (accoutn.AnnualRevenue == null && otherAccount.account.AnnualRevenue == null) {
+        if (account.AnnualRevenue == null && otherAccount.account.AnnualRevenue == null) {
             returnValue = 0;
         }
 
