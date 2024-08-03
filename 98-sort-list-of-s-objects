@@ -18,7 +18,7 @@ public List<Account> getAccounts(List<Account> accounts) {
 }
 
 public class AccountWrapper implements Comparable {
-    public Account account
+    public Account account;
         
     public AccountWrapper(Account acct) {
         if (acct == null) {
