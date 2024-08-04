@@ -6,9 +6,11 @@ public static Integer findLast(List<Integer> nums, Integer target) {
    for (Integer x = 0; x < nums.size(); x++) {
        if (nums.get(x) == target) {
            indexFoundAt = x;
-       } else {
-           indexFoundAt = -1;
-       }
+       } 
+   }
+
+   if (indexFoundAt == 0) {
+       indexFoundAt = -1;
    }
 
    return indexFoundAt;
