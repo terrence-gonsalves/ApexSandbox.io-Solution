@@ -1,16 +1,12 @@
 public static Integer findLast(List<Integer> nums, Integer target) {
-   Integer indexFoundAt = 0;
+   Integer indexFoundAt = -1;
 
-   if (nums.size() == 0) return indexFoundAt;
+   if (nums.size() == 0) return indexFoundAt + 1;
 
    for (Integer x = 0; x < nums.size(); x++) {
        if (nums.get(x) == target) {
            indexFoundAt = x;
        } 
-   }
-
-   if (indexFoundAt == 0) {
-       indexFoundAt = -1;
    }
 
    return indexFoundAt;
