@@ -1,5 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
-    Integer sortAsc = true, sortDesc = true;
+    Boolean sortAsc = true, sortDesc = true;
     Integer tempNum = numbers.get(0);  
 
     if (numbers.size() < 3) {
