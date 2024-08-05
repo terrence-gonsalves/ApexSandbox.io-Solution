@@ -1,14 +1,10 @@
 public Integer secondLargest(List<Integer> numbers) {
-    Integer secondlargestNum = 0;
-    Integer largestSeen = 0;
+    Set<Integer> numbersSet = new Set<Integer>();
+    List<Integer> orderedNumbers = new List<Integer>();
 
-    if (numbers.size() == 0) {
-        return secondlargestNum;
-    }
-
-    for (Integer x = 0; x < numbers.size() - 1; x++) {
-        if (numbers.get(x) > numbers.get(x +1)) {
-
-        }
-    }
+    numbersSet.addAll(numbers);
+    orderedNumbers.addAll(numbersSet);
+    orderedNumbers.sort();
+    
+    return orderedNumbers.get(orderedNumbers.size() - 2);
 }
