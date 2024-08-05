@@ -1,10 +1,10 @@
-public boolean isSorted(List<Integer> numbers) {
-    Integer sortAsc = 1, sortDesc = 1;
-    Integer tempNum = numbers.get(0);  
-
+public boolean isSorted(List<Integer> numbers) { 
     if (numbers.size() < 3) {
         return true;
-    }      
+    }     
+    
+    Integer sortAsc = 1, sortDesc = 1;
+    Integer tempNum = numbers.get(0);  
 
     for (Integer x = 1; x < numbers.size(); x++) {
         if (numbers.get(x) < tempNum) {
