@@ -28,7 +28,7 @@ public class LinkedList{
 
     public Integer removeFromFront() {
         if (this.size() == 0) {
-            return 0;
+            return null;
         } else {
             listValue = intList.remove(0);
         }
