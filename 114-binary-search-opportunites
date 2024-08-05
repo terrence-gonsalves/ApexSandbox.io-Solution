@@ -1,0 +1,9 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    if (opportunities.size() == 0) return -1;
+
+    if (opportunities.contains(target)) {
+        return opportunities.indexOf(target);
+    }
+
+    return -1;
+}
