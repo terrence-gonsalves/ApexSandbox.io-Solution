@@ -41,7 +41,7 @@ public class LinkedList{
     }
 
     public Integer removeFromTail() {
-        if (this.size() == 0) return 0;
+        if (this.size() == 0) return null;
 
         listValue = intList.remove(this.size() - 1);
 
