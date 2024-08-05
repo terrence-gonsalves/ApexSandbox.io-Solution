@@ -15,7 +15,7 @@ public boolean isSorted(List<Integer> numbers) {
             sortAsc = true;
         }
 
-        if (sortAsc || sortDesc) {
+        if (sortAsc && sortDesc) {
             return true;
         }
 
