@@ -1,0 +1,59 @@
+public class LinkedList{
+    public List<Integer> intList;
+    public Integer listValue;
+
+    public LinkedList() {
+        intList = new List<Integer>();
+    }
+    
+    public void addToFront(Integer value) {
+        if (this.size() == 0) {
+            intList.add(value);
+        } else {
+            for (Integer x = this.size(); x >= 0; x--) { 
+                if (x == this.size()) {            
+                    listValue = intList.get(x - 1);
+                    intList.add(listValue);
+                } else {
+                    if (x == 0) {
+                        intList.set(x, value);
+                    } else {
+                        listValue = intList.get(x - 1);
+                        intList.set(x, listValue);
+                    }
+                }
+            }
+        }
+    }
+
+    public Integer removeFromFront() {
+        if (this.size() == 0) {
+            return 0;
+        } else {
+            listValue = intList.remove(0);
+        }
+
+        return listValue;
+    }
+
+    public void addToTail(Integer value) {
+        intList.add(value);
+    }
+
+    public Integer removeFromTail() {
+        if (this.size() == 0) return 0;
+
+        listValue = intList.remove(this.size() - 1);
+
+        return listValue;
+    }
+
+    public Integer size() {
+        return intList.size();
+    }    
+}
+
+public class Node{
+    Integer data;
+    Node next;
+}
