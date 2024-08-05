@@ -5,16 +5,12 @@ public boolean isSorted(List<Integer> numbers) {
     if (numbers.size() < 3)  return true;
 
     for (Integer x = 0; x < numbers.size(); x++) {
-        if (numbers.get(x) /* 0 */ >= tempElement /* 2 */) {
+        if (numbers.get(x) >= tempElement) {
             sortAsc = true;
-        } else {
-            sortAsc = false;
-        }
-        
-        if (numbers.get(x) <= tempElement) {
-            sortDesc = true;
-        } else {
             sortDesc = false;
+        } else  if (numbers.get(x) <= tempElement) {
+            sortDesc = true;
+            sortAsc = false;
         }
 
         tempElement = numbers.get(x); // 5
