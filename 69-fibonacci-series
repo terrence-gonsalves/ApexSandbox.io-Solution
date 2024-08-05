@@ -16,7 +16,6 @@ public List<Integer> fibonacciSeries(Integer n) {
 
         for (Integer x = 3; x <= n; x++) {
             fibonacciList.add(fibonacciList.get(x - 3) + fibonacciList.get(x - 2));
-            // 5-3 (2) = 2 +  5-2 (3) = 3 = 5
         }
     }
     
