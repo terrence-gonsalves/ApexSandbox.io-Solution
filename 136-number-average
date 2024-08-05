@@ -1,5 +1,5 @@
 public Decimal average(List<Decimal> numbers){
-    Decimal numbersRounded = 0.00;
+    Decimal numbersRounded = 0;
     Integer totalNums = numbers.size();
 
     if (totalNums == 0) return numbersRounded;
