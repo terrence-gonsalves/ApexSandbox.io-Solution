@@ -1,0 +1,15 @@
+public Boolean isPalindrome(String str){
+    if (str == '' || str == null) return false;
+
+    String convertedNormal = str.toLowerCase().replaceAll('[^a-zA-Z0-9]', '').deleteWhitespace();
+    String convertedReverse = str.toLowerCase().replaceAll('[^a-zA-Z0-9]', '').deleteWhitespace().reverse();
+
+    system.debug('this is convertedNormal ' + convertedNormal);
+    System.debug('this is convertedReverse ' + convertedReverse);
+
+    if (convertedNormal == convertedReverse) {
+        return true;
+    }
+
+    return false;
+}
