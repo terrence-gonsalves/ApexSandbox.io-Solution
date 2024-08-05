@@ -2,7 +2,7 @@ public Boolean companionPlants(List<String> plants) {
     if (plants.size() == 0) return false;
     Integer plantCount = 0;
 
-    for (Integer x = 0; x < plants.size(); x++) {
+    for (Integer x = 0; x < plants.size() - 1; x++) {
         if ((plants.get(x) == 'lettuce' && plants.get(x + 1) == 'cucumbers') 
             || (plants.get(x) == 'lettuce' && plants.get(x + 1) == 'onions')
             || (plants.get(x) == 'onions' && plants.get(x + 1) == 'carrots')
@@ -18,6 +18,6 @@ public Boolean companionPlants(List<String> plants) {
     if (plantCount == plants.size()) {
         return true;
     }
-    
+
     return false;    
 }
