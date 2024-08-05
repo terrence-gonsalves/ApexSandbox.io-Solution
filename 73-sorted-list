@@ -1,5 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
-    Boolean sortAsc = false, sortDesc = false;
+    Integer sortAsc = 1, sortDesc = 1;
     Integer tempNum = numbers.get(0);  
 
     if (numbers.size() < 3) {
@@ -8,19 +8,19 @@ public boolean isSorted(List<Integer> numbers) {
 
     for (Integer x = 1; x < numbers.size(); x++) {
         if (numbers.get(x) < tempNum) {
-            sortDesc = true;
+            sortDesc = 0;
         }
 
         if (numbers.get(x) > tempNum) {
-            sortAsc = true;
+            sortAsc = 0;
         }
 
-        if (sortAsc || sortDesc) {
-            return true;
+        if (sortAsc && sortDesc) {
+            return false;
         }
 
         tempNum = numbers.get(x);
     }
 
-    return false;
+    return true;
 }
