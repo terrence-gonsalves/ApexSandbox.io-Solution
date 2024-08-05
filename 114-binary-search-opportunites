@@ -3,16 +3,16 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     
     Integer left = 0;
     Integer right = opportunities.size();
-    Integer middle;
+    Integer middle = (left + right) / 2;
 
     while (left < right) {
         middle = (left + right) / 2;
 
-        if (opportunities.get(middle) == target) {
+        if (opportunities.get(middle).Amount == target) {
             return middle;
         }
 
-        if (target < opportunities.get(middle)) {
+        if (target < opportunities.get(middle).Amount) {
             right = middle - 1;
         } else {
             left = middle + 1;
