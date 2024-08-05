@@ -8,5 +8,7 @@ public Decimal average(List<Decimal> numbers){
         numbersRounded += num;
     }
 
-    return numbersRounded.setScale(2) / totalNums;
+    numbersRounded = numbersRounded / totalNums;
+
+    return numbersRounded.setScale(2);
 }
