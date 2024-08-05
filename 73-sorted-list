@@ -4,16 +4,16 @@ public boolean isSorted(List<Integer> numbers) {
     Boolean sortDesc = false;
     if (numbers.size() < 3)  return true;
 
-    for (Integer x = 0; x < numbers.size(); x++) {
-        if (numbers.get(x) >= tempElement) {
+    for (Integer x = 0; x < numbers.size() - 1; x++) {
+        if (numbers.get(x) > numbers.get(x + 1)) {
             sortAsc = true;
-            sortDesc = false;
-        } else  if (numbers.get(x) <= tempElement) {
-            sortDesc = true;
-            sortAsc = false;
-        }
+        } 
+    }
 
-        tempElement = numbers.get(x); // 5
+    for (Integer y = 0; y < numbers.size() -1; x++) {
+        if (numbers.get(x) > numbers.get(x + 1)) {
+            sortDesc = true;
+        }
     }
 
     if (sortDesc || sortAsc) {
