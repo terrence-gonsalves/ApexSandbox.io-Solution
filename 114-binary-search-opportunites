@@ -1,8 +1,22 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
     if (opportunities.size() == 0) return -1;
+    
+    Integer left = 0;
+    Integer right = opportunities.size();
+    Integer middle;
 
-    if (opportunities.indexOf(target) != null) {
-        return opportunities.indexOf(target);
+    while (left < right) {
+        middle = (left + right) / 2;
+
+        if (opportunities.get(middle) == target) {
+            return middle;
+        }
+
+        if (target < opportunities.get(middle)) {
+            right = middle - 1;
+        } else {
+            left = middle + 1;
+        }
     }
 
     return -1;
