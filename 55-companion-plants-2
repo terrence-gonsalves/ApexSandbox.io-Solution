@@ -1,0 +1,23 @@
+public Boolean companionPlants(List<String> plants) { 
+    if (plants.size() == 0) return false;
+    Integer plantCount = 0;
+
+    for (Integer x = 0; x < plants.size(); x++) {
+        if ((plants.get(x) == 'lettuce' && plants.get(x + 1) == 'cucumbers') 
+            || (plants.get(x) == 'lettuce' && plants.get(x + 1) == 'onions')
+            || (plants.get(x) == 'onions' && plants.get(x + 1) == 'carrots')
+            || (plants.get(x) == 'onions' && plants.get(x + 1) == 'tomatoes')
+            || (plants.get(x) == 'onions' && plants.get(x + 1) == 'lettuce')
+            || (plants.get(x) == 'cucumbers' && plants.get(x + 1) == 'lettuce')
+            || (plants.get(x) == 'carrots' && plants.get(x + 1) == 'onions')
+            || (plants.get(x) == 'tomatoes' && plants.get(x + 1) == 'onions')) {
+                plantCount++;
+        }
+    }
+
+    if (plantCount == plants.size()) {
+        return true;
+    }
+    
+    return false;    
+}
