@@ -1,0 +1,12 @@
+public Decimal average(List<Decimal> numbers){
+    Decimal numbersRounded = 0.00;
+    Integer totalNums = numbers.size();
+
+    if (totalNums == 0) return numbersRounded;
+
+    for (Decimal num : numbers) {
+        numbersRounded += num;
+    }
+
+    return numbersRounded.setScale(2) / totalNums;
+}
