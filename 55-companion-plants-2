@@ -4,7 +4,7 @@ public Boolean companionPlants(List<String> plants) {
     Integer plantCount = 0;
 
     for (Integer x = 0; x < plants.size() - 1; x++) {
-        if ((plants.get(x) == 'lettuce' && (plants.get(x + 1) == 'cucumbers') 
+        if ((plants.get(x) == 'lettuce' && plants.get(x + 1) == 'cucumbers') 
             || (plants.get(x) == 'lettuce' && plants.get(x + 1) == 'onions')
             || (plants.get(x) == 'onions' && plants.get(x + 1) == 'carrots')
             || (plants.get(x) == 'onions' && plants.get(x + 1) == 'tomatoes')
@@ -12,6 +12,23 @@ public Boolean companionPlants(List<String> plants) {
             || (plants.get(x) == 'cucumbers' && plants.get(x + 1) == 'lettuce')
             || (plants.get(x) == 'carrots' && plants.get(x + 1) == 'onions')
             || (plants.get(x) == 'tomatoes' && plants.get(x + 1) == 'onions')) {
+                plantCount++;
+        }
+    }
+
+    if (plantCount == plants.size()) {
+        return true;
+    }
+
+    if (plants.size() == 2) {
+        if ((plants.get(0) == 'lettuce' && plants.get(1) == 'cucumbers') 
+            || (plants.get(0) == 'lettuce' && plants.get(1) == 'onions')
+            || (plants.get(0) == 'onions' && plants.get(1) == 'carrots')
+            || (plants.get(0) == 'onions' && plants.get(1) == 'tomatoes')
+            || (plants.get(0) == 'onions' && plants.get(1) == 'lettuce')
+            || (plants.get(0) == 'cucumbers' && plants.get(1) == 'lettuce')
+            || (plants.get(0) == 'carrots' && plants.get(1) == 'onions')
+            || (plants.get(0) == 'tomatoes' && plants.get(1) == 'onions')) {
                 return true;
         }
     }
