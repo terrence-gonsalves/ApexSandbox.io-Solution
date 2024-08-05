@@ -1,11 +1,14 @@
 public Integer maxConsecutiveOnes(Integer[] numbers) {
     Integer onesTotal = 0;
+    Integer max = 0;
 
     if (numbers.size() == 0) return onesTotal;
 
     for (Integer x = 0; x < numbers.size(); x++) {
         if (numbers[x] == 1) {
             onesTotal++;
+
+            if (onesTotal > max) max = onesTotal;
         } else {
             onesTotal = 0;
         }
