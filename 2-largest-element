@@ -1,5 +1,5 @@
 public static Integer findLargest(List<Integer> nums) {
-	Integer tempLargest = 0;
+	Integer tempLargest = nums.get(0);
 
     if (nums.size() == 0) return 0;
 
