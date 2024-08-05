@@ -1,0 +1,14 @@
+public Integer secondLargest(List<Integer> numbers) {
+    Integer secondlargestNum = 0;
+    Integer largestSeen = 0;
+
+    if (numbers.size() == 0) {
+        return secondlargestNum;
+    }
+
+    for (Integer x = 0; x < numbers.size() - 1; x++) {
+        if (numbers.get(x) > numbers.get(x +1)) {
+
+        }
+    }
+}
