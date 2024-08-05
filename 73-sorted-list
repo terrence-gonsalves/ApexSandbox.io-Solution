@@ -1,28 +1,26 @@
 public boolean isSorted(List<Integer> numbers) {
-    Integer tempElement;
-    Boolean sortAsc = false;
-    Boolean sortDesc = false;
-    if (numbers.size() < 3)  return true;
-
-    for (Integer x = 0; x < numbers.size() - 1; x++) {
-        if (numbers.get(x) > numbers.get(x + 1)) {
-            sortAsc = false;
-        } else {
-            sortAsc = true;
-        }
-    }
-
-    for (Integer y = 0; y < numbers.size() - 1; x++) {
-        if (numbers.get(y) < numbers.get(y + 1)) {
-            sortDesc = false;
-        } else {
-            sortDesc = true;
-        }
-    }
-
-    if (sortDesc || sortAsc) {
+    if (numbers.size() < 3) {
         return true;
-    } 
+    }
 
-    return false;
+    Integer sortAsc = 1, sortDesc = 1;
+    Integer tempNum = numbers.get(0);        
+
+    for (Integer x = 1; x < numbers.size(); x++) {
+        if (numbers.get(x) < tempNum) {
+            sortDesc = 0;
+        }
+
+        if (numbers.get(x) > tempNum) {
+            sortAsc = 0;
+        }
+
+        if (sortAsc == 0 && sortDesc == 0) {
+            return false;
+        }
+
+        tempNum = numbers.get(x);
+    }
+
+    return true;
 }
