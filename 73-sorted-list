@@ -1,21 +1,21 @@
 public boolean isSorted(List<Integer> numbers) {
+    Integer sortAsc = false, sortDesc = false;
+    Integer tempNum = numbers.get(0);  
+
     if (numbers.size() < 3) {
         return true;
-    }
-
-    Integer sortAsc = 1, sortDesc = 1;
-    Integer tempNum = numbers.get(0);        
+    }      
 
     for (Integer x = 1; x < numbers.size(); x++) {
         if (numbers.get(x) < tempNum) {
-            sortDesc = 0;
+            sortDesc = true;
         }
 
         if (numbers.get(x) > tempNum) {
-            sortAsc = 0;
+            sortAsc = true;
         }
 
-        if (sortAsc == 0 && sortDesc == 0) {
+        if (sortAsc && sortDesc) {
             return false;
         }
 
