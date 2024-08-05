@@ -16,11 +16,11 @@ public boolean isSorted(List<Integer> numbers) {
         }
 
         if (sortAsc || sortDesc) {
-            return false;
+            return true;
         }
 
         tempNum = numbers.get(x);
     }
 
-    return true;
+    return false;
 }
