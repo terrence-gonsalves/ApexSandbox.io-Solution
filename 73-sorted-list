@@ -7,12 +7,16 @@ public boolean isSorted(List<Integer> numbers) {
     for (Integer x = 0; x < numbers.size() - 1; x++) {
         if (numbers.get(x) > numbers.get(x + 1)) {
             sortAsc = true;
-        } 
+        } else {
+            sortAsc = false;
+        }
     }
 
     for (Integer y = 0; y < numbers.size() - 1; x++) {
         if (numbers.get(y) > numbers.get(y + 1)) {
             sortDesc = true;
+        } else {
+            sortDesc = false;
         }
     }
 
