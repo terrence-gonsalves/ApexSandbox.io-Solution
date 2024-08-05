@@ -1,0 +1,21 @@
+public void insertAtStart(String cityName, List<String> cities) {
+    String shiftCity = '';
+    if (cityName == '') return cities;
+
+    // x = 0
+    for (Integer x = cities.size(); x >= 0; x--) { 
+        if (x == cities.size()) {            
+            shiftCity = cities.get(x - 1); // 2 = London
+            cities.add(shiftCity) // 3, London
+        } else{
+            if (x == 0) {
+                cities.set(x, cityName);
+            } else {
+                shiftCity = cities.get(x - 1); // 0 = Seattle
+                cities.set(x, shiftCity); // 1, Seattle
+            }
+        }
+    }
+
+    return cities;
+}
