@@ -1,3 +1,21 @@
 public void plusOne(List<Integer> numbers) {
-    // code here
+    if (numbers.size() == 0) return;
+    Integer numHolder, remainder = 0;
+
+    for (Integer i = (numbers.size() - 1); i >= 0; i--) {
+        numHolder = numbers.get(i) + 1;
+        
+        if (numHolder == 10) {
+            numbers.set(i, 0);
+            remainder = 1;
+        } else {
+            remainder = 0;
+            numbers.set(i, numHolder);
+        }
+        
+        if (numHolder < 10) {            
+            System.debug('this is the current list ' + numbers);
+            return;
+        } 
+    }
 }
