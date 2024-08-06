@@ -7,10 +7,8 @@ public void plusOne(List<Integer> numbers) {
         
         if (numHolder == 10) {
             numbers.set(i, 0);
-            numHolder = 1;
-            numbers.add(i, numHolder);
+            numbers.add(i, 1);
         } else {
-            remainder = 0;
             numbers.set(i, numHolder);
         }
         
