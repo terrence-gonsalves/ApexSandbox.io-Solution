@@ -1,5 +1,18 @@
 public boolean isAnagram(String s1, String s2) {
-    if (s1.isEmpty() || s2.isEmpty()) return false;
+    if (String.isEmpty(s1) || String.isEmpty(s2)) return false;
 
+    List<String> s1List = s1.split('');
+    List<String> s2List = s2.split('');
 
+    s1List.sort();
+    s2List.sort();
+
+    s1 = String.join(s1List, '');
+    s2 = String.join(s2List, '');
+
+    if (s1 == s2) {
+        return true;
+    }
+
+    return false;
 }
