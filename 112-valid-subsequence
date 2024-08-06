@@ -1,3 +1,10 @@
 public Boolean isSubSequence(String s1, String s2){
-    //code here
+    if (String.isEmpty(s1) || String.isEmpty(s2)) return false;
+
+    List<String> s1List = s1.split('');
+    List<String> s2List = s2.split('');
+    Set<String> s1Set = new Set<String>();
+    s1Set.addAll(s2List);
+
+    return s1Set.containsAll(s1List);
 }
