@@ -1,11 +1,19 @@
 public Integer maxProfit(List<Integer> prices){
     if (prices.size() == 0) return 0;
 
-    final Integer MAX_PROFIT = 10000;
-    Integer highPrice = 0, lowPrice = 0, profit = 0;
+    Integer lowPrice = 10000, oldProfit = 0, profit = 0;
 
-    for (Integer price : prices) {
-        highPrice = price
-        if ()
+    for (Integer x = 0; x < prices.size(); x++) {
+        if (prices.get(x) < lowPrice) {
+            lowPrice = prices.get(x);
+        }
+
+        oldProfit = prices.get(x) - lowPrice;
+
+        if (profit < oldProfit) {
+            profit = oldProfit;
+        }
     }
+
+    return profit;
 }
