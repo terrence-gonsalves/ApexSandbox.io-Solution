@@ -2,19 +2,13 @@ public void defragging(Integer[] memory)
 {
     if (memory.size() == 0) return;
 
-    Integer temp, startPointer = 0, counter = 0;
+    Integer startPointer = 0;
 
-
-    while (counter < memory.size() - 1) { 
-        temp = memory.get(startPointer);
-
-        if (temp == -1) {  
-            memory.remove(startPointer);
-            memory.add(temp);
-        } else {
-            startPointer = counter;
+    for (Integer counter = 0; counter < memory.size(); counter++) { 
+        if(memory.get(startPointer) == -1) {
+            memory.add(memory.remove(startPointer--));
         }
         
-        counter++;
+        startPointer++;
     }
 }
