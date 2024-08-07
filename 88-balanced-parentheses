@@ -1,3 +1,55 @@
 public Boolean isValid(String s){
-    if (s == '') return true;
+    if (s.length() == 0) return true;
+    
+    Stack st = new Stack();
+
+    for (String subStr : s.split('')) {
+        if (subStr == '(' || subStr == '{' || subStr == '[') {
+            st.push(subStr);
+        } else if (!checkClose((String) st.pop(), subStr)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+public Boolean checkClose(String open, String close) {
+    if (open == '(' && close == ')') {
+        return true;
+    } else  if (open == '[' && close == ']') {
+        return true;
+    } else  if (open == '{' && close == '}')  {
+        return true;
+    }
+    
+    return false;
+}
+
+public class Stack {
+    private List<Object> stack = new List<Object>();
+    
+    public void push(Object obj) {
+        this.stack.add(obj);
+    }
+    
+    public Object pop() {
+       return this.stack.isEmpty() ? null : this.stack.remove(this.stack.size() - 1);
+    }
+    
+    public Integer size() {
+       return this.stack.size();
+    }
+    
+    public Object peek(){
+        return this.stack[this.stack.size() - 1];
+    }
+    
+    public Boolean isEmpty() {
+       if (this.stack.isEmpty()) {
+           return true;
+       }
+
+       return false;
+    }
 }
