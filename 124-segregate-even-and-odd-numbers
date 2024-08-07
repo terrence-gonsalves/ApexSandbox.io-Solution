@@ -1,0 +1,3 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+    if (numbers.size() == 0) return;
+}
