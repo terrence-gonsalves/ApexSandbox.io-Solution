@@ -18,5 +18,6 @@ public static void segregateEvenOdd(List<Integer> numbers){
     evenList.sort();
     oddList.sort();
     evenList.addAll(oddList);
+    numbers.removeAll();
     numbers.addAll(evenList);
 }
