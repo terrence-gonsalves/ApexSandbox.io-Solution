@@ -1,0 +1,11 @@
+public Integer maxProfit(List<Integer> prices){
+    if (prices.size() == 0) return 0;
+
+    final Integer MAX_PROFIT = 10000;
+    Integer highPrice = 0, lowPrice = 0, profit = 0;
+
+    for (Integer price : prices) {
+        highPrice = price
+        if ()
+    }
+}
