@@ -1,0 +1,3 @@
+public Boolean isValid(String s){
+    if (s == '') return false;
+}
