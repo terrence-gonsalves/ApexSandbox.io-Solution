@@ -7,7 +7,7 @@ public static List<Integer> squareList(List<Integer> nums){
         squared.add(num * num);
     }
 
-    num.sort();
+    squared.sort();
     
-    return num;
+    return squared;
 }
