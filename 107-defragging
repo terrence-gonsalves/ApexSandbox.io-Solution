@@ -1,4 +1,4 @@
 public void defragging(Integer[] memory)
 {
-    if (memory.size() == 0) return;
+    if (memory.size() == 0 || memory.get(0) == -1) return;
 }
