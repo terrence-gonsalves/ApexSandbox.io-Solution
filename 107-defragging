@@ -11,6 +11,8 @@ public void defragging(Integer[] memory)
         if (temp == -1) {  
             memory.remove(startPointer);
             memory.add(temp);
+        } else {
+            startPointer = counter;
         }
         
         counter++;
