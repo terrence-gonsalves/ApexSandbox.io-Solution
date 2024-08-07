@@ -1,3 +1,21 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     if (numbers.size() == 0) return;
+
+    Integer evens = 0, odds = 0;
+    List<Integer> evenList = new List<Integer>();
+    List<Integer> oddList = new List<Integer>();
+
+    for (Integer num : numbers) {
+        if (Math.mod(num, 2) == 0) {
+           evenList.add(num);
+        }
+
+        if (Math.mod(num, 2) == 1) {
+            oddList.add(num);
+        }
+    }
+
+    evenList.sort();
+    oddList.sort();
+    evenList.addAll(oddList);
 }
