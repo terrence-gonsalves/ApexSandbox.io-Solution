@@ -1,5 +1,14 @@
 public static String reverseWords(String str){
     if (str == '') return str;
 
-    List<String> reversedString = str.split('');
+    List<String> stringList = str.split(' ');
+    List<String> reversedList = new List<String>();
+
+    for (String s : stringList) {
+        reversedList.add(s.reverse());
+    }
+
+    str = String.join(reversedList, ' ');
+
+    return str;
 }
