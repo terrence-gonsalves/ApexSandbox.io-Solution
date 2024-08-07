@@ -1,0 +1,13 @@
+public static List<Integer> squareList(List<Integer> nums){
+    if (nums.size() == 0) return nums;
+
+    List<Integer> squared = new List<Integer>();
+
+    for (Integer num : nums) {
+        squared.add(num * num);
+    }
+
+    num.sort();
+    
+    return num;
+}
