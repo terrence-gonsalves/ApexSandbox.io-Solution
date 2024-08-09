@@ -41,4 +41,12 @@ public static Boolean sameString(String str1, String str2){
         } 
             
         right--;
+    }
+
+    if (charList1.get(0) == 35) charList1.remove(0);
+    if (charList2.get(0) == 35) charList2.remove(0);
+
+    if (charList1.equals(charList2)) return true;
+
+    return false;
 }
