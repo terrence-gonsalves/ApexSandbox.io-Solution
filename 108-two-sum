@@ -1,3 +1,14 @@
 public static List<Integer> twoSum(List<Integer> nums, Integer target) {
-     Map<Integer, Integer> numsSeen = new Map<Integer, Integer>();
+     List<Integer> result = new List<Integer>();
+
+    for (Integer x = 0; x < nums.size(); x++) {
+        for (Integer y = 1; y < nums.size(); y++) {
+            if ((nums.get(x) + nums.get(y)) == target) {
+                result.add(x);
+                result.add(y);
+
+                return result;
+            }
+        }
+    }
 }
