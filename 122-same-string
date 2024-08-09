@@ -19,7 +19,7 @@ public static Boolean sameString(String str1, String str2){
         temp = charList1.get(right - 1);
 
         // this is the poiund size
-        if (charList1.get(right) == 35 && temp != 35) {
+        if (charList1.get(right) == 35) {
             charList1.remove(right);
             charList1.remove(right - 1);
             right = charList1.size() - 1;
