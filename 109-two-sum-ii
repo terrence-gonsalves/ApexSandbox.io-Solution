@@ -1,3 +1,22 @@
 public List<Integer> twoSum(List<Integer> nums, Integer target){
-    //code here
+    List<Integer> result = new List<Integer>();
+    Integer left = 0, right = nums.size() - 1;
+    Integer sum;
+
+    while (left < right) {
+        sum = nums.get(left) + nums.get(right);
+
+        if (sum == target) {
+            result.add(left);
+            result.add(right);
+
+            return result;
+        } else if (sum > target) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+
+    return result;
 }
