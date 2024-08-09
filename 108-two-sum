@@ -1,0 +1,3 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+     Map<Integer, Integer> numsSeen = new Map<Integer, Integer>();
+}
