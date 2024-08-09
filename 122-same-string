@@ -1,52 +1,25 @@
 public static Boolean sameString(String str1, String str2){
-    List<Integer> charList1 = new List<Integer>();
-    List<Integer> charList2 = new List<Integer>();
-    Integer left = 0;
-    Integer right;
-    Integer temp;
+    str1 = processString(str1);
+    str2 = processString(str2);
 
-    for (Integer x = 0; x < str1.length(); x++) {
-        charList1.add(str1.charAt(x));
+    return str1.equals(str2);
+}
+
+public static String processString(String s) {
+    List<String> splitString = s.split('');
+    String result = '';
+    Integer index = 0, count = 0;
+    index = splitString.size() - 1;
+    
+    while (index >= 0) {
+        if (splitString.get(index) == '#') {
+            count++;
+        } else if (count > 0) {
+            count--;
+        } else result += splitString.get(index);
+        
+        index--;
     }
-
-    for (Integer x = 0; x < str2.length(); x++) {
-        charList2.add(str2.charAt(x));
-    }
-
-    right = charList1.size() - 1;
-
-    while (left < right) {
-        temp = charList1.get(right - 1);
-
-        // this is the poiund size
-        if (charList1.get(right) == 35) {
-            charList1.remove(right);
-            charList1.remove(right - 1);
-            right = charList1.size() - 1;
-        } 
-            
-        right--;
-    }
-
-    right = charList2.size() - 1;
-
-    while (left < right) {
-        temp = charList2.get(right - 1);
-
-        // this is the pound size
-        if (charList2.get(right) == 35) {
-            charList2.remove(right);
-            charList2.remove(right - 1);
-            right = charList2.size() - 1;
-        } 
-            
-        right--;
-    }
-
-    if (charList1.get(0) == 35) charList1.remove(0);
-    if (charList2.get(0) == 35) charList2.remove(0);
-
-    if (charList1.equals(charList2)) return true;
-
-    return false;
+    
+    return result;
 }
