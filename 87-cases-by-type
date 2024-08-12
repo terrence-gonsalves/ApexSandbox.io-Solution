@@ -2,15 +2,17 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     Map<String, List<Case>> combinedCasesMap = new Map<String, List<Case>>();
 
     for (Case ca : cases) {
-        if (combinedCasesMap.containsKey(ca.Type)) {
-            List<Case> combinedList = combinedCasesMap.get(ca.Type);
-            combinedList.add(ca);
-            combinedCasesMap.put(ca.Type, combinedList);
-        } else {
-            List<Case> combinedList = new List<Case>();
-            combinedList.add(ca);
-            combinedCasesMap.put(ca.Type, combinedList);
-        } 
+        if (ca.Type != null) {
+            if (combinedCasesMap.containsKey(ca.Type)) {
+                List<Case> combinedList = combinedCasesMap.get(ca.Type);
+                combinedList.add(ca);
+                combinedCasesMap.put(ca.Type, combinedList);
+            } else {
+                List<Case> combinedList = new List<Case>();
+                combinedList.add(ca);
+                combinedCasesMap.put(ca.Type, combinedList);
+            } 
+        }
     }
 
     return combinedCasesMap;
