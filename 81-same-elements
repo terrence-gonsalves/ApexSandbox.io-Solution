@@ -1,4 +1,6 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
+    if (nums1.size() == 0 || nums2.size() == 0) return false;
+    
     Set<Integer> setOne = new Set<Integer>(nums1);
     Set<Integer> setTwo = new Set<Integer>(nums2);
 
