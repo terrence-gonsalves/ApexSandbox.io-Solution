@@ -1,7 +1,7 @@
 public String employeeEmail(Map<String, String> employeeIdToEmail, String employeeId) {
     String emailToReturn = 'info@apexsandbox.io';
 
-    for (Id key : employeeIdToEmail.keySet()) {
+    for (String key : employeeIdToEmail.keySet()) {
         if (key == employeeId) {
             emailToReturn = employeeIdToEmail.get(key);
         }
