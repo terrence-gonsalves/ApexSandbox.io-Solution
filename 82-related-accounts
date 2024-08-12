@@ -1,8 +1,10 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
     Set<Id> relatedSet = new Set<Id>();
     
-    for(Opportunity opp : opps) {
-        relatedSet.add(opp.AccountId);
+    if (opps.size > 0) {
+        for(Opportunity opp : opps) {
+            relatedSet.add(opp.AccountId);
+        }
     }
 
     return relatedSet;
