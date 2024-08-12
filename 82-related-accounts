@@ -5,6 +5,8 @@ public Set<Id> accountIds(List<Opportunity> opps) {
         for(Opportunity opp : opps) {
             relatedSet.add(opp.AccountId);
         }
+    } else {
+        return 0;
     }
 
     return relatedSet;
