@@ -1,0 +1,23 @@
+public static Integer longestDistinctSubstring(String str, Integer k){ 
+    // did not complete this as I had not clue what the ask was
+
+    Integer max = -1, n = str.length();
+
+    for (Integer x = 0; x < n; x++) {
+        Set<Integer> setOfChars = new Set<Integer>();
+
+        for (Integer j = x; j < n; j++) {
+            Integer temp = str.charAt(j);
+
+            if (!setOfChars.contains(temp) && setOfChars.size() == k) {
+                max = Math.max(max, j - x);
+
+                break;
+            } else {
+                setOfChars.add(temp);
+            }
+        }
+    }
+
+    return max == -1 ? n : max;
+}
