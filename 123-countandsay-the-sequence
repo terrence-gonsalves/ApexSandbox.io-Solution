@@ -1,0 +1,23 @@
+public string countAndSay(integer N) {
+    // did not do this as I have no clue what the ask was
+
+    if (N == 1) {
+        return '1';
+    }
+
+    String temp = countAndSay(N - 1);
+    String result = '';
+    Integer count = 0;
+
+    for (Integer x = 0; x < temp.length(); x++) {
+        count++;
+
+        if (x == (temp.length() - 1) || temp.charAt(i) != temp.charAt(i+1)) {
+            result += String.valueOf(count) + temp.subString(x, x + 1);
+
+            count = 0;
+        }
+    }
+
+    return result;
+}
