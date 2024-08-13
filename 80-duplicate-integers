@@ -5,9 +5,9 @@ public Boolean containsDuplicates(List<Integer> nums) {
         if (!duplicatesSet.contains(num)) {
             duplicatesSet.add(num);
         } else {
-            return false;
+            return true;
         }
     }
 
-    return true;
+    return false;
 }
