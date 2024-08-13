@@ -12,7 +12,7 @@ public string countAndSay(integer N) {
     for (Integer x = 0; x < temp.length(); x++) {
         count++;
 
-        if (x == (temp.length() - 1) || temp.charAt(i) != temp.charAt(i+1)) {
+        if (x == (temp.length() - 1) || temp.charAt(x) != temp.charAt(x + 1)) {
             result += String.valueOf(count) + temp.subString(x, x + 1);
 
             count = 0;
